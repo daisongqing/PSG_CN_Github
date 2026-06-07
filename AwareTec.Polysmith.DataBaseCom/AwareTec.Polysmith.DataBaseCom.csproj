@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A560F1F-6E11-4A46-A4AA-6CC15508C5F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AwareTec.Polysmith.DataBaseCom</RootNamespace>
+    <AssemblyName>AwareTec.Polysmith.DataBaseCom</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.105.2, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLImport\Sqlite的服务库\x64\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Doc_MolarReuslt.cs" />
+    <Compile Include="Doc_ParameterSettings.cs" />
+    <Compile Include="Doc_ReportStructural.cs" />
+    <Compile Include="Doc_DataResult.cs" />
+    <Compile Include="Doc_Channel.cs" />
+    <Compile Include="Doc_EventsDefine.cs" />
+    <Compile Include="Doc_CalibrationDefine.cs" />
+    <Compile Include="Doc_CalibrationRecord.cs" />
+    <Compile Include="Doc_Doctor.cs" />
+    <Compile Include="Doc_Epochs.cs" />
+    <Compile Include="Doc_EventRecords.cs" />
+    <Compile Include="Doc_EventType.cs" />
+    <Compile Include="Doc_MainViewRecord.cs" />
+    <Compile Include="Doc_SystemSetting.cs" />
+    <Compile Include="Doc_UsersInfo.cs" />
+    <Compile Include="Doc_BodyMovementResult.cs" />
+    <Compile Include="Doc_BodyStateResult.cs" />
+    <Compile Include="Doc_BreathEventResult.cs" />
+    <Compile Include="Doc_BloodOxygenResult.cs" />
+    <Compile Include="Doc_HeartRateReuslt.cs" />
+    <Compile Include="Doc_PatientInfo.cs" />
+    <Compile Include="Doc_SleepResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pSystem.Interface.Util\pSystem.Interface.Util.csproj">
+      <Project>{f0ed2aa0-3513-41dc-808b-c6727176ac03}</Project>
+      <Name>pSystem.Interface.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

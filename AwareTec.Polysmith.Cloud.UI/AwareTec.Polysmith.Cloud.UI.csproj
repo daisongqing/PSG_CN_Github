@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{126D1142-9659-494A-AB9D-91E6343841BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AwareTec.Polysmith.Cloud.UI</RootNamespace>
+    <AssemblyName>AwareTec.Polysmith.Cloud.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>hmlogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AwareTec.Polysmith.Vedio">
+      <HintPath>..\AwareTec.Polysmith.Vedio\bin\Debug\AwareTec.Polysmith.Vedio.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.AcroPDFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLImport\AxInterop.AcroPDFLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.3.1.9, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLImport\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.AcroPDFLib">
+      <HintPath>..\DLLImport\Interop.AcroPDFLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="InTheHand.Net.Personal, Version=3.5.605.0, Culture=neutral, PublicKeyToken=ea38caa273134499, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLImport\InTheHand.Net.Personal.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLImport\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLImport\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.5.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLImport\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.5.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLImport\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.5.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLImport\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.5.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLImport\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="pSystem.Communication.Com">
+      <HintPath>..\Peng\pSystem.Communication.Com.dll</HintPath>
+    </Reference>
+    <Reference Include="pSystem.LogManagement">
+      <HintPath>..\Peng\pSystem.LogManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="pSystem.UI.DotNetCtl">
+      <HintPath>..\Peng\pSystem.UI.DotNetCtl.dll</HintPath>
+    </Reference>
+    <Reference Include="pSystem.UI.ReaLTaiizor">
+      <HintPath>..\Peng\pSystem.UI.ReaLTaiizor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\CustomAttributeReader.cs" />
+    <Compile Include="Base\ViewModelAttribute.cs" />
+    <Compile Include="DataModels\AnalysisResult.cs" />
+    <Compile Include="DataModels\ChannelConfig.cs" />
+    <Compile Include="DataModels\ChannelTable.cs" />
+    <Compile Include="DataModels\ConfigurationModel\Default\DefaultEvent.cs" />
+    <Compile Include="DataModels\ConfigurationModel\Default\DefaultEvents.cs" />
+    <Compile Include="DataModels\ConfigurationModel\FullUser\FullUserConfigurationModel.cs" />
+    <Compile Include="DataModels\ConfigurationModel\Predefined\PredefinedChannel.cs" />
+    <Compile Include="DataModels\ConfigurationModel\Predefined\PredefinedReportStructure.cs" />
+    <Compile Include="DataModels\ConfigurationModel\Predefined\total\PredefinedChannels.cs" />
+    <Compile Include="DataModels\ConfigurationModel\Predefined\total\PredefinedCalibrations.cs" />
+    <Compile Include="DataModels\ConfigurationModel\Predefined\total\PredefinedEvents.cs" />
+    <Compile Include="DataModels\ConfigurationModel\Predefined\total\PredefinedReportStructures.cs" />
+    <Compile Include="DataModels\ConfigurationModel\RequiredFileOrDir\RequiredPath.cs" />
+    <Compile Include="DataModels\ConfigurationModel\RequiredFileOrDir\RequiredSubPath.cs" />
+    <Compile Include="DataModels\ConfigurationModel\SpecificXmlHelper\BaseSpecificXmlHelper.cs" />
+    <Compile Include="DataModels\ConfigurationModel\SpecificXmlHelper\FullUserConfigurationXmlHelper.cs" />
+    <Compile Include="DataModels\ConfigurationModel\User\OrderPath.cs" />
+    <Compile Include="DataModels\ConfigurationModel\User\OrderPaths.cs" />
+    <Compile Include="DataModels\ConfigurationModel\SpecificXmlHelper\OrderPathXmlHelper.cs" />
+    <Compile Include="DataModels\ConfigurationModel\User\UserOperationConfig.cs" />
+    <Compile Include="DataModels\ConfigurationModel\SpecificXmlHelper\UserOperationConfigXmlHelper.cs" />
+    <Compile Include="DataModels\DataManger.cs" />
+    <Compile Include="DataModels\EnumModels\MainFormCloseMethod.cs" />
+    <Compile Include="DataModels\EnumModels\RequiredFileType.cs" />
+    <Compile Include="DataModels\ConfigurationModel\Predefined\PredefinedCalibration.cs" />
+    <Compile Include="DataModels\DeviceOnLine.cs" />
+    <Compile Include="DataModels\DeviceOnWLan.cs" />
+    <Compile Include="DataModels\EDF.cs" />
+    <Compile Include="DataModels\EDFInstance.cs" />
+    <Compile Include="DataModels\EnumModels\CheckResults.cs" />
+    <Compile Include="DataModels\EnumModels\EnumFunction.cs" />
+    <Compile Include="DataModels\EnumModels\EnumPage.cs" />
+    <Compile Include="DataModels\EnumModels\ScanMethod.cs" />
+    <Compile Include="DataModels\Global\Channel.cs" />
+    <Compile Include="DataModels\Global\DefaultData.cs" />
+    <Compile Include="DataModels\Global\GlobalReadonlyString.cs" />
+    <Compile Include="DataModels\Global\GlobalSingleton.cs" />
+    <Compile Include="DataModels\Global\PredefinedData.cs" />
+    <Compile Include="DataModels\Global\UserDomain.cs" />
+    <Compile Include="DataModels\IDevice.cs" />
+    <Compile Include="DataModels\LogInstance.cs" />
+    <Compile Include="DataModels\MarkerTable.cs" />
+    <Compile Include="DataModels\ConfigurationModel\Predefined\PredefinedEvent.cs" />
+    <Compile Include="DataModels\RemoteDataInteration.cs" />
+    <Compile Include="DataModels\ResultDomain.cs" />
+    <Compile Include="DataModels\ViewModel\Base\IFromDb.cs" />
+    <Compile Include="DataModels\ViewModel\BuiltInType\ImageAndStringCell.cs" />
+    <Compile Include="DataModels\ViewModel\CustomEventArgs\RecordCountPerPageChangedEventArgs.cs" />
+    <Compile Include="DataModels\ViewModel\CustomEventArgs\SelectedPageNoChangedEventArgs.cs" />
+    <Compile Include="DataModels\ViewModel\CustomEventArgs\TotalPageCountChangedEventArgs.cs" />
+    <Compile Include="DataModels\ViewModel\CustomEventArgs\TotalRecordCountChangedEventArgs.cs" />
+    <Compile Include="DataModels\ViewModel\FromDbToDb\OrderRecordPaginationViewModel.cs" />
+    <Compile Include="DataModels\ViewModel\ToDb\OrderRecordSearchViewModel.cs" />
+    <Compile Include="DataModels\ViewModel\FromDb\OrderRecordViewModel.cs" />
+    <Compile Include="DataModels\ViewModel\Base\IToDb.cs" />
+    <Compile Include="DataModels\ViewResult.cs" />
+    <Compile Include="Forms\ConfigurationBlock\FullUserConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigurationBlock\FullUserConfiguration.Designer.cs">
+      <DependentUpon>FullUserConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForceUpdatePromptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForceUpdatePromptForm.Designer.cs">
+      <DependentUpon>ForceUpdatePromptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HistoryDataViewBlock\AnalysisSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HistoryDataViewBlock\AnalysisSelection.Designer.cs">
+      <DependentUpon>AnalysisSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HistoryDataViewBlock\EditEDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HistoryDataViewBlock\EditEDF.Designer.cs">
+      <DependentUpon>EditEDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HistoryDataViewBlock\OutReportSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HistoryDataViewBlock\OutReportSelection.Designer.cs">
+      <DependentUpon>OutReportSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LicenseActivationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LicenseActivationForm.Designer.cs">
+      <DependentUpon>LicenseActivationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\AutoSearchEDFDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\AutoSearchEDFDialog.Designer.cs">
+      <DependentUpon>AutoSearchEDFDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\ChannelCloneDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\ChannelCloneDialog.Designer.cs">
+      <DependentUpon>ChannelCloneDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\ChannelCreatDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\ChannelCreatDialog.Designer.cs">
+      <DependentUpon>ChannelCreatDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\ChannelItemConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\ChannelItemConfig.Designer.cs">
+      <DependentUpon>ChannelItemConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\ExportSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\ExportSelection.Designer.cs">
+      <DependentUpon>ExportSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\MarkerEditCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\MarkerEditCopy.Designer.cs">
+      <DependentUpon>MarkerEditCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\MarkerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\MarkerManagement.Designer.cs">
+      <DependentUpon>MarkerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\Montage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\Montage.Designer.cs">
+      <DependentUpon>Montage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\MontageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\MontageDialog.Designer.cs">
+      <DependentUpon>MontageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\NewDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\NewDevice.Designer.cs">
+      <DependentUpon>NewDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\OperationLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\OperationLogForm.Designer.cs">
+      <DependentUpon>OperationLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\ProgressTipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBlock\ProgressTipForm.Designer.cs">
+      <DependentUpon>ProgressTipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PdfViewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PdfViewDialog.Designer.cs">
+      <DependentUpon>PdfViewDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RealDataView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\RealDataView.Designer.cs">
+      <DependentUpon>RealDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RealDataViewBlock\Calibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RealDataViewBlock\Calibration.Designer.cs">
+      <DependentUpon>Calibration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RealDataViewBlock\ImpedanceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RealDataViewBlock\ImpedanceView.Designer.cs">
+      <DependentUpon>ImpedanceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RealDataViewBlock\SetTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RealDataViewBlock\SetTime.Designer.cs">
+      <DependentUpon>SetTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tips\MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tips\MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tips\Moudle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tips\Moudle.Designer.cs">
+      <DependentUpon>Moudle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tips\NetworkIsUnavailableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tips\NetworkIsUnavailableForm.Designer.cs">
+      <DependentUpon>NetworkIsUnavailableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfigurationBlock\UserOperationConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigurationBlock\UserOperationConfiguration.Designer.cs">
+      <DependentUpon>UserOperationConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewHelpers\ChannelManageCloud.cs" />
+    <Compile Include="ViewHelpers\CheckBeforeLoadSoftware.cs" />
+    <Compile Include="ViewHelpers\CheckNetworkIsAvailableBackgroundThread.cs" />
+    <Compile Include="ViewHelpers\CustomFileCopier.cs" />
+    <Compile Include="ViewHelpers\DownloadFileHelper.cs" />
+    <Compile Include="ViewHelpers\FileCopyHelper.cs" />
+    <Compile Include="ViewHelpers\FileResumableUploadsHelper.cs" />
+    <Compile Include="ViewHelpers\GetFunctionTypeHelper.cs" />
+    <Compile Include="ViewHelpers\GetSuggestionAboutPathHelper.cs" />
+    <Compile Include="ViewHelpers\InputTextCheck.cs" />
+    <Compile Include="ViewHelpers\LoginHelper.cs" />
+    <Compile Include="ViewHelpers\OrderRecordViewHelper\OrderPathHelper.cs" />
+    <Compile Include="ViewHelpers\ShowFileByExtensionHelper.cs" />
+    <Compile Include="ViewHelpers\StartupProgram.cs" />
+    <Compile Include="ViewHelpers\TaskUion.cs" />
+    <Compile Include="ViewHelpers\UploadReportHelper.cs" />
+    <Compile Include="ViewHelpers\ViewHelperEventArgs\CopyFileEventArgs.cs" />
+    <Compile Include="ViewHelpers\ViewHelperEventArgs\FileSliceDownloadResultEventArgs.cs" />
+    <Compile Include="ViewHelpers\ViewHelperEventArgs\FileSliceUploadResultEventArgs.cs" />
+    <Compile Include="ViewHelpers\ViewHelperEventArgs\ZipFileEventArgs.cs" />
+    <Compile Include="ViewHelpers\ZipFileHelper.cs" />
+    <Compile Include="Views\HistoryDataView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\HistoryDataView.Designer.cs">
+      <DependentUpon>HistoryDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HomePageOrderRecordView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\HomePageOrderRecordView.Designer.cs">
+      <DependentUpon>HomePageOrderRecordView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MiniModel\DownloadEdfParamsModel.cs" />
+    <Compile Include="Views\ObverseLogCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ObverseLogCtrl.Designer.cs">
+      <DependentUpon>ObverseLogCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderRecordPaginationView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OrderRecordPaginationView.Designer.cs">
+      <DependentUpon>OrderRecordPaginationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderRecordSearchView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OrderRecordSearchView.Designer.cs">
+      <DependentUpon>OrderRecordSearchView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderRecordView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OrderRecordView.Designer.cs">
+      <DependentUpon>OrderRecordView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginInfoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LoginInfoView.Designer.cs">
+      <DependentUpon>LoginInfoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddMarks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AddMarks.Designer.cs">
+      <DependentUpon>AddMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddMultSleep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AddMultSleep.Designer.cs">
+      <DependentUpon>AddMultSleep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ArousalSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ArousalSelection.Designer.cs">
+      <DependentUpon>ArousalSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HScrollBarEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\HScrollBarEx.Designer.cs">
+      <DependentUpon>HScrollBarEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MulReportChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\MulReportChart.Designer.cs">
+      <DependentUpon>MulReportChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SleepStageSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SleepStageSelection.Designer.cs">
+      <DependentUpon>SleepStageSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Spo2RangeSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Spo2RangeSelection.Designer.cs">
+      <DependentUpon>Spo2RangeSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewsEventArgs\QueryOrderByFilterEventArgs.cs" />
+    <Compile Include="Views\ViewsEventArgs\RecordCountPerPageFromOrderRecordViewArgs.cs" />
+    <Compile Include="Views\ViewsEventArgs\SwitchPageEventArgs.cs" />
+    <EmbeddedResource Include="Forms\ConfigurationBlock\FullUserConfiguration.resx">
+      <DependentUpon>FullUserConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigurationBlock\UserOperationConfiguration.resx">
+      <DependentUpon>UserOperationConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HistoryDataViewBlock\AnalysisSelection.resx">
+      <DependentUpon>AnalysisSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HistoryDataViewBlock\EditEDF.resx">
+      <DependentUpon>EditEDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HistoryDataViewBlock\OutReportSelection.resx">
+      <DependentUpon>OutReportSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormBlock\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormBlock\AutoSearchEDFDialog.resx">
+      <DependentUpon>AutoSearchEDFDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormBlock\ChannelCloneDialog.resx">
+      <DependentUpon>ChannelCloneDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormBlock\ChannelCreatDialog.resx">
+      <DependentUpon>ChannelCreatDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormBlock\ChannelItemConfig.resx">
+      <DependentUpon>ChannelItemConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormBlock\ExportSelection.resx">
+      <DependentUpon>ExportSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormBlock\MarkerEditCopy.resx">
+      <DependentUpon>MarkerEditCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormBlock\MarkerManagement.resx">
+      <DependentUpon>MarkerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormBlock\Montage.resx">
+      <DependentUpon>Montage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormBlock\MontageDialog.resx">
+      <DependentUpon>MontageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormBlock\NewDevice.resx">
+      <DependentUpon>NewDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormBlock\OperationLogForm.resx">
+      <DependentUpon>OperationLogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormBlock\ProgressTipForm.resx">
+      <DependentUpon>ProgressTipForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PdfViewDialog.resx">
+      <DependentUpon>PdfViewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RealDataView.resx">
+      <DependentUpon>RealDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RealDataViewBlock\Calibration.resx">
+      <DependentUpon>Calibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RealDataViewBlock\ImpedanceView.resx">
+      <DependentUpon>ImpedanceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RealDataViewBlock\SetTime.resx">
+      <DependentUpon>SetTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tips\MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tips\Moudle.resx">
+      <DependentUpon>Moudle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddMarks.resx">
+      <DependentUpon>AddMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddMultSleep.resx">
+      <DependentUpon>AddMultSleep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ArousalSelection.resx">
+      <DependentUpon>ArousalSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HistoryDataView.resx">
+      <DependentUpon>HistoryDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HScrollBarEx.resx">
+      <DependentUpon>HScrollBarEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MulReportChart.resx">
+      <DependentUpon>MulReportChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ObverseLogCtrl.resx">
+      <DependentUpon>ObverseLogCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SleepStageSelection.resx">
+      <DependentUpon>SleepStageSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Spo2RangeSelection.resx">
+      <DependentUpon>Spo2RangeSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForceUpdatePromptForm.resx">
+      <DependentUpon>ForceUpdatePromptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LicenseActivationForm.resx">
+      <DependentUpon>LicenseActivationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tips\NetworkIsUnavailableForm.resx">
+      <DependentUpon>NetworkIsUnavailableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\HomePageOrderRecordView.resx">
+      <DependentUpon>HomePageOrderRecordView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderRecordPaginationView.resx">
+      <DependentUpon>OrderRecordPaginationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderRecordSearchView.resx">
+      <DependentUpon>OrderRecordSearchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OrderRecordView.resx">
+      <DependentUpon>OrderRecordView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginInfoView.resx">
+      <DependentUpon>LoginInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AwareTec.Polysmith.DataBaseCom\AwareTec.Polysmith.DataBaseCom.csproj">
+      <Project>{1a560f1f-6e11-4a46-a4aa-6cc15508c5f4}</Project>
+      <Name>AwareTec.Polysmith.DataBaseCom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AwareTec.Polysmith.DataCenter\AwareTec.Polysmith.DataCenter.csproj">
+      <Project>{83345acc-abfd-4169-80cb-400ec9543b49}</Project>
+      <Name>AwareTec.Polysmith.DataCenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AwareTec.Polysmith.DataMangement\AwareTec.Polysmith.DataMangement.csproj">
+      <Project>{558f4bd5-b7a5-41dd-9a8f-477692fbd55e}</Project>
+      <Name>AwareTec.Polysmith.DataMangement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AwareTec.Polysmith.pChart\AwareTec.Polysmith.pChart.csproj">
+      <Project>{cfa771b3-e669-4b28-a777-29c68fa6c5c4}</Project>
+      <Name>AwareTec.Polysmith.pChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AwareTec.Polysmith.Protocol\AwareTec.Polysmith.Protocol.csproj">
+      <Project>{05e0fca0-04d0-4247-8208-4dc948e90600}</Project>
+      <Name>AwareTec.Polysmith.Protocol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AwareTec.Polysmith.Util\AwareTec.Polysmith.Util.csproj">
+      <Project>{8e17279a-669d-486f-82a4-08669089a83b}</Project>
+      <Name>AwareTec.Polysmith.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Peng\pSystem.UI.Register\pSystem.UI.Register.csproj">
+      <Project>{a3a6906a-5581-43df-b43b-5ce33fafca07}</Project>
+      <Name>pSystem.UI.Register</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RestfulWebRequest\RestfulWebRequest.csproj">
+      <Project>{b52d4481-4865-4623-94d3-51967bb9df60}</Project>
+      <Name>RestfulWebRequest</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\machineCode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passwordIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adultIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\childVersion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\globalSettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\serialNumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloudSoftwareInstallPackage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smileyIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\returnHomePage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noNetworkTips.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startAnalysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiTrendChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analysisReport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveAnalysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exportReport.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\attention.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\收起.png" />
+    <None Include="Resources\complete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下拉.png" />
+    <None Include="Resources\LRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下拉3.png" />
+    <None Include="Resources\LYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\收起1.png" />
+    <None Include="Resources\LGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\收起3.png" />
+    <None Include="Resources\LGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下拉1.png" />
+    <None Include="Resources\failed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\complete.png" />
+    <None Include="Resources\收起.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LRed.png" />
+    <None Include="Resources\收起1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LYellow.png" />
+    <None Include="Resources\收起3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LGreen.png" />
+    <None Include="Resources\下拉.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下拉1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下拉3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hmlogo.ico" />
+    <Content Include="logo.ico" />
+    <None Include="Resources\formlogo.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\logo1.png" />
+    <None Include="Resources\SetTimeOK.png" />
+    <None Include="Resources\AuditNoPassed.png" />
+    <None Include="Resources\ToBeUpload.png" />
+    <None Include="Resources\ToBeAudit.png" />
+    <None Include="Resources\NotReviewed.png" />
+    <None Include="Resources\AuditPassed.png" />
+    <None Include="Resources\ToBeMonitored.png" />
+    <None Include="Resources\ToBeAnalysis.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- 生成之前 -->
+  <Target Name="BeforeBuild">
+    <!-- 复制目录 -->
+    <ItemGroup>
+      <AnalysisSource Include="$(ProjectDir)\PreBuild\AnalysisSource\**\*.*" />
+      <coeffs Include="$(ProjectDir)\PreBuild\coeffs\**\*.*" />
+      <Default Include="$(ProjectDir)\PreBuild\Default\**\*.*" />
+      <Feature Include="$(ProjectDir)\PreBuild\Feature\**\*.*" />
+      <Filiter Include="$(ProjectDir)\PreBuild\Filiter\**\*.*" />
+      <Predefined Include="$(ProjectDir)\PreBuild\Predefined\**\*.*" />
+      <pvedio Include="$(ProjectDir)\PreBuild\pvedio\**\*.*" />
+      <ReportTemplate Include="$(ProjectDir)\PreBuild\ReportTemplate\**\*.*" />
+      <TemPlate Include="$(ProjectDir)\PreBuild\TemPlate\**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(AnalysisSource)" DestinationFolder="$(OutDir)\AnalysisSource\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(coeffs)" DestinationFolder="$(OutDir)\coeffs\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(Default)" DestinationFolder="$(OutDir)\Default\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(Feature)" DestinationFolder="$(OutDir)\Feature\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(Filiter)" DestinationFolder="$(OutDir)\Filiter\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(Predefined)" DestinationFolder="$(OutDir)\Predefined\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(pvedio)" DestinationFolder="$(OutDir)\pvedio\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(ReportTemplate)" DestinationFolder="$(OutDir)\ReportTemplate\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(TemPlate)" DestinationFolder="$(OutDir)\TemPlate\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <!-- 复制文件 -->
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\FileOrDir.required" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\onuse.dll" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\psg_wrapper.dll" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\respiratory_rate.dll" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\help.pdf" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

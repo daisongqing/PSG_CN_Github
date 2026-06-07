@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{970955EE-1622-4E1C-98F2-77EF1C322D1C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AwareTec.Polysmith.Vedio</RootNamespace>
+    <AssemblyName>AwareTec.Polysmith.Vedio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <DocumentationFile>bin\Release\AwareTec.Polysmith.Vedio.XML</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="pSystem.UI.DotNetCtl">
+      <HintPath>..\Peng\pSystem.UI.DotNetCtl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CHCNetSDK.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WinMessageUtil.cs" />
+    <Compile Include="MyConfiguration.cs" />
+    <Compile Include="ControlPlayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlPlayer.Designer.cs">
+      <DependentUpon>ControlPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReturnResult.cs" />
+    <Compile Include="UserOprerationPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserOprerationPanel.Designer.cs">
+      <DependentUpon>UserOprerationPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VedioManagement.cs" />
+    <Compile Include="VedioPlayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VedioPlayer.Designer.cs">
+      <DependentUpon>VedioPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VedioStreamSDK.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ControlPlayer.resx">
+      <DependentUpon>ControlPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserOprerationPanel.resx">
+      <DependentUpon>UserOprerationPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VedioPlayer.resx">
+      <DependentUpon>VedioPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeftFast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeftFastest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightFast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightFastest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soundClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soundClose_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volStart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volStop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\operat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\operat2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound4.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

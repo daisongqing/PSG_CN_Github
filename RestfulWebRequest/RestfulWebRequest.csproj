@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B52D4481-4865-4623-94D3-51967BB9DF60}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RestfulWebRequest</RootNamespace>
+    <AssemblyName>RestfulWebRequest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLImport\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiCall\ApiRequest.cs" />
+    <Compile Include="ApiCall\BaseApiRequest.cs" />
+    <Compile Include="ApiCall\StreamReceivedBack.cs" />
+    <Compile Include="Base\HttpHelper.cs" />
+    <Compile Include="EnumModels\EnumModels4Table\EventType.cs" />
+    <Compile Include="EnumModels\EnumModels4Table\ExamineStatus.cs" />
+    <Compile Include="EnumModels\EnumModels4Table\ExamType.cs" />
+    <Compile Include="EnumModels\EnumModels4Table\ModeType.cs" />
+    <Compile Include="EnumModels\EnumModels4Table\OrderStatus.cs" />
+    <Compile Include="EnumModels\EnumModels4Table\UserType.cs" />
+    <Compile Include="EnumModels\RequestFailType.cs" />
+    <Compile Include="EnumModels\ResponseContentType.cs" />
+    <Compile Include="RestfulAttribute\AttributeReader.cs" />
+    <Compile Include="RestfulAttribute\RestfulApiAttribute.cs" />
+    <Compile Include="Base\RestfulRequest.cs" />
+    <Compile Include="EnumModels\RequestMethod.cs" />
+    <Compile Include="RestfulAttribute\FileUploadAttribute.cs" />
+    <Compile Include="RestfulModel\ResponseErrorModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\DeleteUserEventRequestModel.cs" />
+    <Compile Include="RestfulTable\IRestfulTable.cs" />
+    <Compile Include="Base\UserTokenInfo.cs" />
+    <Compile Include="RestfulModel\RequestModel.cs" />
+    <Compile Include="RestfulModel\ResponseFailModel.cs" />
+    <Compile Include="RestfulModel\ResponseModel.cs" />
+    <Compile Include="RestfulModel\ResponseSuccessModel.cs" />
+    <Compile Include="Base\UserTokenInfoControl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\AddOrEditMonitoringDataRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\AddUserEventRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\AuditRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\DownloadEDFRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\DownloadReportRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\EditUserEventRequest.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\GetMyOrderRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\GetPermissionListRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\HasEquipmentRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\QueryMonitoringDataRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\QueryUserEventRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\QueryOrderListUsingAuditorRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\QueryOrderListUsingCustomerServiceRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\QueryOrderListUsingMapInterpnetationDoctoRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\SaveAnalysisRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\StartMonitoringRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\UpdateScheduledTaskFlagRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\UploadEDFMarkupRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\UploadEDFRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\UploadReportRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulRequestTable\UserLoginRequestModel.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\BuiltInType\DownLoadFileModel.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\BuiltInType\OrderItem.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\BuiltInType\Patient.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\BuiltInType\Permission.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\BuiltInType\UserEvent.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\DownloadEDFResponseModel.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\DownloadReportResponseModel.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\GetMyOrderResponseModel.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\GetPermissionListResponseModel.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\HasEquipmentResponseModel.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\QueryMonitoringDataResponseModel.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\QueryMonitoringVersionResponseModel.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\QueryUserEventResponseModel.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\QueryOrderListResponseModel.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\UploadEDFMarkupResponseModel.cs" />
+    <Compile Include="RestfulTable\RestfulResponseTable\UserLoginResponseModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="RequestUrl.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

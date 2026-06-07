@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{765D2B31-3106-4F16-997B-6E5089E80700}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Physio.Polysmith.DataInstanceCom</RootNamespace>
+    <AssemblyName>Physio.Polysmith.DataInstanceCom</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Doc_lese_message.cs" />
+    <Compile Include="Doc_lese_adminclients.cs" />
+    <Compile Include="Doc_lese_doctorclients.cs" />
+    <Compile Include="Doc_lese_analysisqueue.cs" />
+    <Compile Include="Doc_lese_edfproccess.cs" />
+    <Compile Include="Doc_lese_adminrelationeventsdefine.cs" />
+    <Compile Include="Doc_lese_userpatientorder.cs" />
+    <Compile Include="Doc_lese_userpatient.cs" />
+    <Compile Include="Doc_lese_eventsdefine.cs" />
+    <Compile Include="Doc_lese_organization.cs" />
+    <Compile Include="Doc_lese_role.cs" />
+    <Compile Include="Doc_lese_servicescenter.cs" />
+    <Compile Include="Doc_lese_systemsetting.cs" />
+    <Compile Include="Doc_lese_device.cs" />
+    <Compile Include="Doc_lese_doctor.cs" />
+    <Compile Include="Doc_lese_epochs.cs" />
+    <Compile Include="Doc_lese_eventrecords.cs" />
+    <Compile Include="Doc_lese_auth.cs" />
+    <Compile Include="Doc_lese_calibrationdefine.cs" />
+    <Compile Include="Doc_lese_calibrationrecord.cs" />
+    <Compile Include="Doc_lese_centerperson.cs" />
+    <Compile Include="Doc_lese_clientanalysis.cs" />
+    <Compile Include="Doc_lese_clientdown.cs" />
+    <Compile Include="Doc_lese_clients.cs" />
+    <Compile Include="Doc_lese_dataresult.cs" />
+    <Compile Include="Doc_lese_admin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Doc_lese_adminrelationsetting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\pSystem.Interface.Util\pSystem.Interface.Util.csproj">
+      <Project>{f0ed2aa0-3513-41dc-808b-c6727176ac03}</Project>
+      <Name>pSystem.Interface.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

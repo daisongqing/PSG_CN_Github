@@ -1,0 +1,1122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>pSystem.Communication.Com</name>
+    </assembly>
+    <members>
+        <member name="T:pSystem.Communication.Com.MyBlueToothClient">
+            <summary>
+            蓝牙通讯客户端
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyBlueToothClient.wbdelay">
+            <summary>
+            写字节延时
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyBlueToothClient.rbdelay">
+            <summary>
+            读字节延时
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyBlueToothClient.m_serverBlueTooth">
+            <summary>
+            服务端蓝牙对象
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyBlueToothClient.m_ServerbtAddress">
+            <summary>
+            服务端蓝牙地址
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyBlueToothClient.m_strLocalGUID">
+            <summary>
+            本地GUID字符串
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyBlueToothClient.m_LimitLen">
+            <summary>
+            最大可接受数据长度
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyBlueToothClient.m_Tout">
+            <summary>
+            读取超时时间
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:pSystem.Communication.Com.MyBlueToothClient.m_Dout" -->
+        <member name="M:pSystem.Communication.Com.MyBlueToothClient.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothClient.SearchbtDev">
+            <summary>
+            查找设备
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothClient.BeginConnect">
+            <summary>
+            异步连接
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothClient.Connect(System.IAsyncResult)">
+            <summary>
+            开启连接
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothClient.DataRec(System.IAsyncResult)">
+            <summary>
+            数据接收委托方法
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothClient.Open(System.Object[])">
+            <summary>
+            打开端口
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothClient.Close">
+            <summary>
+            关闭端口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothClient.DataSend(System.Byte[])">
+            <summary>
+            数据发送
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothClient.ReadBytes">
+            <summary>
+            读取数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothClient.ReadByte">
+            <summary>
+            读一个字节
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyBlueToothClient.TimeOut">
+            <summary>
+            读写超时时间
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyBlueToothClient.Delay">
+            <summary>
+            读写延迟时间
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyBlueToothClient.ReadByteDelay">
+            <summary>
+            获取或设置读一个字节延迟间隔
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyBlueToothClient.WriteByteDelay">
+            <summary>
+            获取或设置写一个字节延迟间隔
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyBlueToothClient.LimitLen">
+            <summary>
+            获取或设置最大可接受数据长度
+            </summary>
+        </member>
+        <member name="T:pSystem.Communication.Com.MyBlueToothServer">
+            <summary>
+            蓝牙通讯服务端
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyBlueToothServer.wbdelay">
+            <summary>
+            写字节延时
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyBlueToothServer.rbdelay">
+            <summary>
+            读字节延时
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyBlueToothServer.m_LimitLen">
+            <summary>
+            最大可接受数据长度
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyBlueToothServer.m_Tout">
+            <summary>
+            读取超时时间
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyBlueToothServer.m_Dout">
+            <summary>
+            读取延迟时间
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothServer.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothServer.acceptConnect">
+            <summary>
+            接收一个客户端，直到成功为止
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothServer.Connect(System.IAsyncResult)">
+            <summary>
+            开启连接
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothServer.DataRec(System.IAsyncResult)">
+            <summary>
+            数据接收委托方法
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothServer.Open(System.Object[])">
+            <summary>
+            打开端口
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothServer.Close">
+            <summary>
+            关闭端口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothServer.DataSend(System.Byte[])">
+            <summary>
+            数据发送
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothServer.ReadBytes">
+            <summary>
+            读取数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyBlueToothServer.ReadByte">
+            <summary>
+            读一个字节
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyBlueToothServer.TimeOut">
+            <summary>
+            读写超时时间
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyBlueToothServer.Delay">
+            <summary>
+            读写延迟时间
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyBlueToothServer.ReadByteDelay">
+            <summary>
+            获取或设置读一个字节延迟间隔
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyBlueToothServer.WriteByteDelay">
+            <summary>
+            获取或设置写一个字节延迟间隔
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyBlueToothServer.LimitLen">
+            <summary>
+            获取或设置最大可接受数据长度
+            </summary>
+        </member>
+        <member name="T:pSystem.Communication.Com.BlueTooth">
+            <summary>
+            蓝牙自定义结构
+            </summary>
+        </member>
+        <member name="T:pSystem.Communication.Com.MyTCPServer">
+            <summary>
+            supersocket的服务端
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyTCPServer.m_Tout">
+            <summary>
+            读取超时时间
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyTCPServer.m_Dout">
+            <summary>
+            读取延迟时间
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyTCPServer.wbdelay">
+            <summary>
+            写字节延时
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyTCPServer.rbdelay">
+            <summary>
+            读字节延时
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyTCPServer.m_Tcpsever">
+            <summary>
+            SuperSocket的服务端对象
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPServer.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPServer.#ctor(System.Int32,System.String)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyTCPServer.TCPClientList">
+            <summary>
+            存储客户的列表
+            </summary>
+        </member>
+        <member name="T:pSystem.Communication.Com.MyTCPServer.ClinetDownDelegate">
+            <summary>
+            客户掉线处理方法
+            </summary>
+            <param name="client"></param>
+        </member>
+        <member name="E:pSystem.Communication.Com.MyTCPServer.ClientDown">
+            <summary>
+            客户掉线事件
+            </summary>
+        </member>
+        <member name="T:pSystem.Communication.Com.MyTCPServer.RecConnetHandleDelegate">
+            <summary>
+            接收到一个连接的委托方法
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="E:pSystem.Communication.Com.MyTCPServer.RecConnetHandle">
+            <summary>
+            接收到一个连接事件
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPServer.PortID">
+            <summary>
+            获取端口号
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPServer.IP">
+            <summary>
+            获取监控IP
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPServer.StartListener">
+            <summary>
+            开始监控
+            </summary>
+            <param name="port"></param>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPServer.StopListener">
+            <summary>
+            停止监听
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="E:pSystem.Communication.Com.MyTCPServer.DataReceiveHandle">
+            <summary>
+            数据接收处理事件
+            </summary>
+        </member>
+        <member name="E:pSystem.Communication.Com.MyTCPServer.IOConnectHandle">
+            <summary>
+            客户连接处理事件
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPServer.Close">
+            <summary>
+            关闭监听模式
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPServer.DataSend(System.Byte[])">
+            <summary>
+            数据发送
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPServer.Open(System.Object[])">
+            <summary>
+            打开监听模式
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPServer.MatchKey">
+            <summary>
+            物理层与协议层关联key
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPServer.IsConnected">
+            <summary>
+            获取连接状态
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPServer.ChannelTyp">
+            <summary>
+            通道类型
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPServer.IsServer">
+            <summary>
+            是否为服务端模式
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPServer.TimeOut">
+            <summary>
+            获取或设置读写超时时间
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPServer.Delay">
+            <summary>
+            获取或设置读写延迟时间
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPServer.ReadByteDelay">
+            <summary>
+            获取或设置读一个字节延迟间隔
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPServer.WriteByteDelay">
+            <summary>
+            获取或设置写一个字节延迟间隔
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPServer.ReadBytes">
+            <summary>
+            读取数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPServer.ReadByte">
+            <summary>
+            读一个字节
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:pSystem.Communication.Com.TCPClient">
+            <summary>
+            supersocket的连接上来的客户端
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.TCPClient.#ctor(pSystem.Communication.Com.SuperSocketAppSession)">
+            <summary>
+            客户端构造函数
+            </summary>
+            <param name="client">TcpClient对象</param>
+            <param name="rec">DataRecHandleDelegate委托事件</param>
+            <param name="down">ClinetDownDelegate委托事件</param>
+        </member>
+        <member name="F:pSystem.Communication.Com.TCPClient.DataBuff">
+            <summary>
+            数据缓存
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.TCPClient.Close(System.Boolean)">
+            <summary>
+            关闭通讯连接
+            </summary>
+            <param name="shotdown">是否需要在服务端让该客户端连接下线</param>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.TCPClient.ActionDataReceiveHandle(System.Byte[])">
+            <summary>
+            触发数据接收事件
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="P:pSystem.Communication.Com.TCPClient.IP">
+            <summary>
+            获取IP
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.TCPClient.Port">
+            <summary>
+            获取Port
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.TCPClient.MaxRecLeng">
+            <summary>
+            获取或设置接收最大长度
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.TCPClient.m_client">
+            <summary>
+            客户端对象
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.TCPClient.wbdelay">
+            <summary>
+            写字节延时
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.TCPClient.rbdelay">
+            <summary>
+            读字节延时
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.TCPClient.m_Tout">
+            <summary>
+            读取超时时间
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.TCPClient.m_Dout">
+            <summary>
+            读取延迟时间
+            </summary>
+        </member>
+        <member name="E:pSystem.Communication.Com.TCPClient.DataReceiveHandle">
+            <summary>
+            数据接收处理事件
+            </summary>
+        </member>
+        <member name="E:pSystem.Communication.Com.TCPClient.IOConnectHandle">
+            <summary>
+            客户连接处理事件
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.TCPClient.Close">
+            <summary>
+            关闭监听模式
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.TCPClient.DataSend(System.Byte[])">
+            <summary>
+            数据发送
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.TCPClient.ChannelTyp">
+            <summary>
+            通道类型
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.TCPClient.Open(System.Object[])">
+            <summary>
+            打开监听模式
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.TCPClient.IsConnected">
+            <summary>
+            获取连接状态
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.TCPClient.IsServer">
+            <summary>
+            是否为服务端模式
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.TCPClient.MatchKey">
+            <summary>
+            物理层与协议层关联key
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.TCPClient.TimeOut">
+            <summary>
+            获取或设置读写超时时间
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.TCPClient.Delay">
+            <summary>
+            获取或设置读写延迟时间
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.TCPClient.ReadByteDelay">
+            <summary>
+            获取或设置读一个字节延迟间隔
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.TCPClient.WriteByteDelay">
+            <summary>
+            获取或设置写一个字节延迟间隔
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.TCPClient.ReadBytes">
+            <summary>
+            读取数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.TCPClient.ReadByte">
+            <summary>
+            读一个字节
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:pSystem.Communication.Com.SuperSocketRequestInfo">
+            <summary>
+            接收到的数据类
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.SuperSocketRequestInfo.#ctor(System.String,System.Byte[])">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key">键值</param>
+            <param name="body">接收的数据体</param>
+        </member>
+        <member name="P:pSystem.Communication.Com.SuperSocketRequestInfo.Body">
+            <summary>
+            请求信息缓存
+            </summary>
+        </member>
+        <member name="T:pSystem.Communication.Com.SuperSocketReceiveFilter">
+            <summary>
+            数据过滤器
+            </summary>
+        </member>
+        <member name="T:pSystem.Communication.Com.SuperSocketAppSession">
+            <summary>
+            SuperSocket服务端下主动连接上来的客户端
+            </summary>
+        </member>
+        <member name="T:pSystem.Communication.Com.SuperSocketAppServer">
+            <summary>
+            SuperSocket服务端
+            </summary>
+        </member>
+        <member name="T:pSystem.Communication.Com.IOClient">
+            <summary>
+            客户端数据传输基类
+            </summary>
+        </member>
+        <member name="E:pSystem.Communication.Com.IOClient.m_AddLog">
+            <summary>
+            监听日志信息
+            </summary>
+        </member>
+        <member name="E:pSystem.Communication.Com.IOClient.AddLog">
+            <summary>
+            监听日志信息
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.IOClient.addLog(pSystem.LogManagement.LogItem)">
+            <summary>
+            添加日志信息
+            </summary>
+            <param name="log"></param>
+        </member>
+        <member name="P:pSystem.Communication.Com.IOClient.Tag">
+            <summary>
+            Tag
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.IOClient.PrintFrame(System.Byte[],System.String,System.Byte)">
+            <summary>
+            打印输出日志 1-发送数据  2-接收数据  3-接收数据解密部分 4-发送数据解密部分 other-接收的所有源数据
+            </summary>
+            <param name="data"></param>
+            <param name="typ"></param>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.IOClient.PrintFrame(System.String,System.String,System.Byte)">
+            <summary>
+            打印输出日志 1-发送数据  2-接收数据  3-接收数据解密部分 4-发送数据解密部分 other-接收的所有源数据
+            </summary>
+            <param name="data"></param>
+            <param name="typ"></param>
+            <returns></returns>
+        </member>
+        <member name="T:pSystem.Communication.Com.IOClient.DataRecHandleDelegate">
+            <summary>
+            数据接收处理委托方法
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:pSystem.Communication.Com.IOClient.IOConnetHandleDelegate">
+            <summary>
+            连接成功处理委托方法
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="E:pSystem.Communication.Com.IOClient.DataReceiveHandle">
+            <summary>
+            数据接收事件
+            </summary>
+        </member>
+        <member name="E:pSystem.Communication.Com.IOClient.IOConnectHandle">
+            <summary>
+            连接成功事件
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.IOClient.Open(System.Object[])">
+            <summary>
+            尝试打开端口
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.IOClient.Close">
+            <summary>
+            关闭串口
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.IOClient.IsConnected">
+            <summary>
+             获取串口连接状态
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.IOClient.MatchKey">
+            <summary>
+            物理层与协议层关联key
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.IOClient.ChannelTyp">
+            <summary>
+            通道类型
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.IOClient.IsServer">
+            <summary>
+             是否是TCP服务端模式
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.IOClient.DataSend(System.Byte[])">
+            <summary>
+            发送数据
+            </summary>
+            <param name="data">数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.IOClient.ReadBytes">
+            <summary>
+            读取数据
+            </summary>
+            <returns>数据</returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.IOClient.ReadByte">
+            <summary>
+            读一个字节
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:pSystem.Communication.Com.IOClient.TimeOut">
+            <summary>
+             获取或设置读写超时时间
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.IOClient.Delay">
+            <summary>
+            获取或设置读写延迟时间
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.IOClient.ReadByteDelay">
+            <summary>
+            获取或设置读一个字节延迟间隔
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.IOClient.WriteByteDelay">
+            <summary>
+            获取或设置写一个字节延迟间隔
+            </summary>
+        </member>
+        <member name="T:pSystem.Communication.Com.ChannelType">
+            <summary>
+            通道类型
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.ChannelType.SerialPort">
+            <summary>
+            串口
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.ChannelType.AccordtcpClient">
+            <summary>
+            主客户端
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.ChannelType.TcpServer">
+            <summary>
+            服务端
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.ChannelType.OnLinetcpClient">
+            <summary>
+            服务端模式下远程上线客户端
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.ChannelType.AccordBlueToothClient">
+            <summary>
+            蓝牙主客户端
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.ChannelType.BlueToothServer">
+            <summary>
+            蓝牙主服务端
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.ChannelType.OnLineBlueToothClient">
+            <summary>
+            服务端模式下远程上线蓝牙客户端
+            </summary>
+        </member>
+        <member name="T:pSystem.Communication.Com.MySerialPort">
+            <summary>
+            串口远程服务端类
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MySerialPort.#ctor(System.String)">
+            <summary>
+            构造函数IOPortSever
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MySerialPort.m_port">
+            <summary>
+            串口对象
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MySerialPort.tout">
+            <summary>
+            超时时间
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MySerialPort.btout">
+            <summary>
+            字节延时时间
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MySerialPort.wbdelay">
+            <summary>
+            写字节延时
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MySerialPort.rbdelay">
+            <summary>
+            读字节延时
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MySerialPort.m_stop">
+            <summary>
+            停止任务
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MySerialPort.m_ReadFinish">
+            <summary>
+            读任务结束标志
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MySerialPort.m_port_DataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+            <summary>
+            事件接收过程
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:pSystem.Communication.Com.MySerialPort.m_KillTask">
+            <summary>
+            任务终止
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MySerialPort.th">
+            <summary>
+            线程th
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MySerialPort.m_PushReady">
+            <summary>
+            是否已上报
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MySerialPort.TaskStart">
+            <summary>
+            任务执行器
+            </summary>
+        </member>
+        <member name="E:pSystem.Communication.Com.MySerialPort.DataReceiveHandle">
+            <summary>
+            数据接收事件
+            </summary>
+        </member>
+        <member name="E:pSystem.Communication.Com.MySerialPort.IOConnectHandle">
+            <summary>
+            连接成功事件
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MySerialPort.DataSend(System.Byte[])">
+            <summary>
+            发送数据
+            </summary>
+            <param name="data">数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.MySerialPort.Open(System.Object[])">
+            <summary>
+            尝试打开串口
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MySerialPort.Close">
+            <summary>
+            关闭串口
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MySerialPort.ChannelTyp">
+            <summary>
+            通道类型
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MySerialPort.IsServer">
+            <summary>
+            是否为服务端模式
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MySerialPort.MatchKey">
+            <summary>
+            物理层与协议层关联key
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MySerialPort.IsConnected">
+            <summary>
+            串口连接状态
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MySerialPort.TimeOut">
+            <summary>
+            设置或读取超时时间
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MySerialPort.Delay">
+            <summary>
+            设置或读取字节延迟时间
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MySerialPort.ReadByteDelay">
+            <summary>
+            获取或设置读一个字节延迟间隔
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MySerialPort.WriteByteDelay">
+            <summary>
+            获取或设置写一个字节延迟间隔
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MySerialPort.Port">
+            <summary>
+            获取或设置端口号
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MySerialPort.DataBits">
+            <summary>
+            读取或设置数据位
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MySerialPort.StopBit">
+            <summary>
+            读取或设置停止位
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MySerialPort.Parity">
+            <summary>
+            获取或设置串口校验方式
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MySerialPort.BaudRate">
+            <summary>
+            读取或设置波特率
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MySerialPort.ConnectState">
+            <summary>
+            获取连接状态
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MySerialPort.ReadByte">
+            <summary>
+            读取一个字节
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:pSystem.Communication.Com.MyTCPClient">
+            <summary>
+            网口通讯底层服务端
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyTCPClient.wbdelay">
+            <summary>
+            写字节延时
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyTCPClient.rbdelay">
+            <summary>
+            读字节延时
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyTCPClient.m_tcp">
+            <summary>
+            tcp客户端
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyTCPClient.m_NetStream">
+            <summary>
+            基础数据流
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyTCPClient.m_ConnectState">
+            <summary>
+            连接状态
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyTCPClient.m_LimitLen">
+            <summary>
+            最大可接受数据长度
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyTCPClient.m_Tout">
+            <summary>
+            读取超时时间
+            </summary>
+        </member>
+        <member name="F:pSystem.Communication.Com.MyTCPClient.m_Dout">
+            <summary>
+            读取延迟时间
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPClient.Connect(System.IAsyncResult)">
+            <summary>
+            网口连接委托
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPClient.DataRec(System.IAsyncResult)">
+            <summary>
+            数据接收委托方法
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPClient.#ctor(System.String,System.Int32)">
+            <summary>
+            进行远程服务器的连接
+            <param name="ip">ip地址</param>
+            <param name="port">端口</param>
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPClient.#ctor">
+            <summary>
+            构造函数TCPServer
+            </summary>
+        </member>
+        <member name="E:pSystem.Communication.Com.MyTCPClient.DataReceiveHandle">
+            <summary>
+            数据接收事件委托
+            </summary>
+        </member>
+        <member name="E:pSystem.Communication.Com.MyTCPClient.IOConnectHandle">
+            <summary>
+            连接事件委托
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPClient.Close">
+            <summary>
+            关闭
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPClient.Open(System.Object[])">
+            <summary>
+            尝试打开端口
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPClient.ChannelTyp">
+            <summary>
+            通道类型
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPClient.MatchKey">
+            <summary>
+            物理层与协议层关联key
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPClient.IsConnected">
+            <summary>
+            获取连接状态
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPClient.IsServer">
+            <summary>
+            是否为服务端模式
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPClient.TimeOut">
+            <summary>
+            读写超时时间
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPClient.Delay">
+            <summary>
+            读写延迟时间
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPClient.ReadByteDelay">
+            <summary>
+            获取或设置读一个字节延迟间隔
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPClient.WriteByteDelay">
+            <summary>
+            获取或设置写一个字节延迟间隔
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPClient.ReadBytes">
+            <summary>
+            读取数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPClient.ReadByte">
+            <summary>
+            读一个字节
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPClient.DataSend(System.Byte[])">
+            <summary>
+            数据发送
+            </summary>
+            <param name="data">数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPClient.BeginConnect(System.String,System.Int32)">
+            <summary>
+            重新远程服务器连接函数
+            <param name="ip">ip地址</param>
+            <param name="port">端口</param>
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPClient.LimitLen">
+            <summary>
+            获取或设置最大可接受数据长度
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPClient.NetStream">
+            <summary>
+            获取或设置基础数据流
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPClient.Tcp">
+            <summary>
+            获取TCP客户端
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPClient.IP">
+            <summary>
+            获取IP地址
+            </summary>
+        </member>
+        <member name="P:pSystem.Communication.Com.MyTCPClient.PortID">
+            <summary>
+            获取端口号
+            </summary>
+        </member>
+        <member name="M:pSystem.Communication.Com.MyTCPClient.GetConnectState">
+            <summary>
+            获取连接状态函数
+            </summary>
+        </member>
+    </members>
+</doc>

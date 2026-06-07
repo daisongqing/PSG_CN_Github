@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83345ACC-ABFD-4169-80CB-400EC9543B49}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AwareTec.Polysmith.DataCenter</RootNamespace>
+    <AssemblyName>AwareTec.Polysmith.DataCenter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalysisThresholdCondition.cs" />
+    <Compile Include="BaseFile.cs" />
+    <Compile Include="BodyPosResult.cs" />
+    <Compile Include="BreathResult.cs" />
+    <Compile Include="DataAnalysis.cs" />
+    <Compile Include="ExtraTaskRunningDelegate.cs" />
+    <Compile Include="MolarResult.cs" />
+    <Compile Include="iniFile.cs" />
+    <Compile Include="DataTransfer.cs" />
+    <Compile Include="EnumDefine.cs" />
+    <Compile Include="FileDataInfo.cs" />
+    <Compile Include="HeartResult.cs" />
+    <Compile Include="ICommunication.cs" />
+    <Compile Include="IDataBase.cs" />
+    <Compile Include="IResult.cs" />
+    <Compile Include="LegsMoveResult.cs" />
+    <Compile Include="SleepResult.cs" />
+    <Compile Include="Spo2Result.cs" />
+    <Compile Include="TargetCenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AwareTec.Polysmith.DataBaseCom\AwareTec.Polysmith.DataBaseCom.csproj">
+      <Project>{1a560f1f-6e11-4a46-a4aa-6cc15508c5f4}</Project>
+      <Name>AwareTec.Polysmith.DataBaseCom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AwareTec.Polysmith.pChart\AwareTec.Polysmith.pChart.csproj">
+      <Project>{CFA771B3-E669-4B28-A777-29C68FA6C5C4}</Project>
+      <Name>AwareTec.Polysmith.pChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AwareTec.Polysmith.Util\AwareTec.Polysmith.Util.csproj">
+      <Project>{8E17279A-669D-486F-82A4-08669089A83B}</Project>
+      <Name>AwareTec.Polysmith.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pSystem.Interface.Util\pSystem.Interface.Util.csproj">
+      <Project>{f0ed2aa0-3513-41dc-808b-c6727176ac03}</Project>
+      <Name>pSystem.Interface.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

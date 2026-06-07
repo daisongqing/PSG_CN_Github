@@ -1,0 +1,149 @@
+﻿
+namespace AwareTec.Polysmith.Cloud.UI.Views
+{
+    partial class AddMultSleep
+    {
+        /// <summary> 
+        /// 必需的设计器变量。
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// 清理所有正在使用的资源。
+        /// </summary>
+        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region 组件设计器生成的代码
+
+        /// <summary> 
+        /// 设计器支持所需的方法 - 不要修改
+        /// 使用代码编辑器修改此方法的内容。
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.startdateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.stopdateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.CancelButton = new pSystem.UI.ReaLTaiizor.Controls.DungeonButtonLeft();
+            this.ConformButton = new pSystem.UI.ReaLTaiizor.Controls.DungeonButtonLeft();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(21, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "开始时间";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(275, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "结束时间";
+            // 
+            // startdateTimePicker1
+            // 
+            this.startdateTimePicker1.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.startdateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.startdateTimePicker1.Location = new System.Drawing.Point(92, 19);
+            this.startdateTimePicker1.Name = "startdateTimePicker1";
+            this.startdateTimePicker1.Size = new System.Drawing.Size(131, 25);
+            this.startdateTimePicker1.TabIndex = 80;
+            // 
+            // stopdateTimePicker1
+            // 
+            this.stopdateTimePicker1.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.stopdateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.stopdateTimePicker1.Location = new System.Drawing.Point(355, 19);
+            this.stopdateTimePicker1.Name = "stopdateTimePicker1";
+            this.stopdateTimePicker1.Size = new System.Drawing.Size(131, 25);
+            this.stopdateTimePicker1.TabIndex = 81;
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.CancelButton.BackColor = System.Drawing.Color.Transparent;
+            this.CancelButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.CancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CancelButton.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.CancelButton.Image = null;
+            this.CancelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CancelButton.InactiveColorA = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.CancelButton.InactiveColorB = System.Drawing.Color.White;
+            this.CancelButton.Location = new System.Drawing.Point(268, 70);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.PressedColorA = System.Drawing.Color.White;
+            this.CancelButton.PressedColorB = System.Drawing.Color.White;
+            this.CancelButton.PressedContourColorA = System.Drawing.Color.White;
+            this.CancelButton.PressedContourColorB = System.Drawing.Color.White;
+            this.CancelButton.Size = new System.Drawing.Size(89, 32);
+            this.CancelButton.TabIndex = 82;
+            this.CancelButton.Text = "取 消";
+            this.CancelButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // ConformButton
+            // 
+            this.ConformButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConformButton.BackColor = System.Drawing.Color.Transparent;
+            this.ConformButton.BorderColor = System.Drawing.Color.Transparent;
+            this.ConformButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ConformButton.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ConformButton.ForeColor = System.Drawing.Color.White;
+            this.ConformButton.Image = null;
+            this.ConformButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ConformButton.InactiveColorA = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(171)))));
+            this.ConformButton.InactiveColorB = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(171)))));
+            this.ConformButton.Location = new System.Drawing.Point(397, 70);
+            this.ConformButton.Name = "ConformButton";
+            this.ConformButton.PressedColorA = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(214)))), ((int)(((byte)(187)))));
+            this.ConformButton.PressedColorB = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(214)))), ((int)(((byte)(187)))));
+            this.ConformButton.PressedContourColorA = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(214)))), ((int)(((byte)(187)))));
+            this.ConformButton.PressedContourColorB = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(214)))), ((int)(((byte)(187)))));
+            this.ConformButton.Size = new System.Drawing.Size(89, 32);
+            this.ConformButton.TabIndex = 83;
+            this.ConformButton.Text = "确 定";
+            this.ConformButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // AddMultSleep
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.ConformButton);
+            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.stopdateTimePicker1);
+            this.Controls.Add(this.startdateTimePicker1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "AddMultSleep";
+            this.Size = new System.Drawing.Size(524, 122);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker startdateTimePicker1;
+        private System.Windows.Forms.DateTimePicker stopdateTimePicker1;
+        private pSystem.UI.ReaLTaiizor.Controls.DungeonButtonLeft CancelButton;
+        private pSystem.UI.ReaLTaiizor.Controls.DungeonButtonLeft ConformButton;
+    }
+}

@@ -1,0 +1,917 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A891B86-438E-4DD1-B862-C07B800109F4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AwareTec.Polysmith.UI</RootNamespace>
+    <AssemblyName>AwareTec.Polysmith.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>physio.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="InTheHand.Net.Personal, Version=3.5.605.0, Culture=neutral, PublicKeyToken=ea38caa273134499, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLImport\InTheHand.Net.Personal.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\DLLImport\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.3.1.9, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLImport\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.5.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\DLLImport\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.5.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\DLLImport\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.5.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\DLLImport\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.5.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\DLLImport\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\DLLImport\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\DLLImport\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLLImport\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="pSystem.Communication.Com">
+      <HintPath>..\Peng\pSystem.Communication.Com.dll</HintPath>
+    </Reference>
+    <Reference Include="pSystem.LogManagement">
+      <HintPath>..\Peng\pSystem.LogManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="pSystem.UI.DotNetCtl">
+      <HintPath>..\Peng\pSystem.UI.DotNetCtl.dll</HintPath>
+    </Reference>
+    <Reference Include="pSystem.UI.ReaLTaiizor">
+      <HintPath>..\Peng\pSystem.UI.ReaLTaiizor.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket">
+      <HintPath>..\DLLImport\SuperSocket.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Block\ChannelCreatDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\ChannelCreatDialog.Designer.cs">
+      <DependentUpon>ChannelCreatDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\ImpedanceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\ImpedanceView.Designer.cs">
+      <DependentUpon>ImpedanceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\MontageCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\MontageCopy.Designer.cs">
+      <DependentUpon>MontageCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\Montage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\Montage.Designer.cs">
+      <DependentUpon>Montage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\NewDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\NewDevice.Designer.cs">
+      <DependentUpon>NewDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\NewReplayDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\NewReplayDialog.Designer.cs">
+      <DependentUpon>NewReplayDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\ObverseLogCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block\ObverseLogCtrl.Designer.cs">
+      <DependentUpon>ObverseLogCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\OperationLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\OperationLogForm.Designer.cs">
+      <DependentUpon>OperationLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\ParameterSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\ParameterSettings.Designer.cs">
+      <DependentUpon>ParameterSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\PatientEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\PatientEdit.Designer.cs">
+      <DependentUpon>PatientEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\Moudle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\Moudle.Designer.cs">
+      <DependentUpon>Moudle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\DoctorEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\DoctorEdit.Designer.cs">
+      <DependentUpon>DoctorEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\MarkerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\MarkerManagement.Designer.cs">
+      <DependentUpon>MarkerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\ImportHistroyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\ImportHistroyDialog.Designer.cs">
+      <DependentUpon>ImportHistroyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\ChannelMulEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\ChannelMulEdit.Designer.cs">
+      <DependentUpon>ChannelMulEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\MontageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\MontageDialog.Designer.cs">
+      <DependentUpon>MontageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\ChannelCloneDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\ChannelCloneDialog.Designer.cs">
+      <DependentUpon>ChannelCloneDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\Calibration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\Calibration.Designer.cs">
+      <DependentUpon>Calibration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block\SystemParamDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block\SystemParamDialog.Designer.cs">
+      <DependentUpon>SystemParamDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageMgr.cs" />
+    <Compile Include="CompatibleDbManager\CompatibleDbManagerException.cs" />
+    <Compile Include="CompatibleDbManager\EventDefineTable\ModeTypeCompatibleDbManager.cs" />
+    <Compile Include="CompatibleDbManager\SystemSettingTable\ModeTypeCompatibleDbManager.cs" />
+    <Compile Include="DataModel\AnalysisRecordViewData.cs" />
+    <Compile Include="DataModel\DataManger.cs" />
+    <Compile Include="DataModel\EDFInstance.cs" />
+    <Compile Include="DataModel\IDevice.cs" />
+    <Compile Include="DataModel\DeviceOnWLan.cs" />
+    <Compile Include="DataModel\InputTextCheck.cs" />
+    <Compile Include="DataModel\LogInstance.cs" />
+    <Compile Include="DataModel\ObjectExtensions.cs" />
+    <Compile Include="DataModel\PubReturnMsg.cs" />
+    <Compile Include="DataModel\RemoteDataInteration.cs" />
+    <Compile Include="DataModel\TemplateCheck.cs" />
+    <Compile Include="DataModel\DataBaseHelper.cs" />
+    <Compile Include="DataModel\AnalysisResult.cs" />
+    <Compile Include="DataModel\DeviceOnLine.cs" />
+    <Compile Include="EnumModel\ModeType.cs" />
+    <Compile Include="FunctionControls\tools\AddMultSleep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\AddMultSleep.Designer.cs">
+      <DependentUpon>AddMultSleep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\EditEDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\EditEDF.Designer.cs">
+      <DependentUpon>EditEDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\ChannelItemConfigCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\ChannelItemConfigCopy.Designer.cs">
+      <DependentUpon>ChannelItemConfigCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\ExportSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\ExportSelection.Designer.cs">
+      <DependentUpon>ExportSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\AnalysisSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\AnalysisSelection.Designer.cs">
+      <DependentUpon>AnalysisSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\ArousalSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\ArousalSelection.Designer.cs">
+      <DependentUpon>ArousalSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\AutoSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\AutoSearchDialog.Designer.cs">
+      <DependentUpon>AutoSearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\MarkerEditCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\MarkerEditCopy.Designer.cs">
+      <DependentUpon>MarkerEditCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\OutReportSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\OutReportSelection.Designer.cs">
+      <DependentUpon>OutReportSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\SleepStageSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\SleepStageSelection.Designer.cs">
+      <DependentUpon>SleepStageSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\Spo2RangeSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\Spo2RangeSelection.Designer.cs">
+      <DependentUpon>Spo2RangeSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\SetTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\SetTime.Designer.cs">
+      <DependentUpon>SetTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PdfViewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PdfViewDialog.Designer.cs">
+      <DependentUpon>PdfViewDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\AnalysisRecordView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\AnalysisRecordView.Designer.cs">
+      <DependentUpon>AnalysisRecordView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\ChannelItemConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\ChannelItemConfig.Designer.cs">
+      <DependentUpon>ChannelItemConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\LockDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\LockDialog.Designer.cs">
+      <DependentUpon>LockDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\MarkerEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\MarkerEdit.Designer.cs">
+      <DependentUpon>MarkerEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeautifulRuler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataModel\BatchUnit.cs" />
+    <Compile Include="DataModel\Channel.cs" />
+    <Compile Include="ChannelConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChannelConfig.Designer.cs">
+      <DependentUpon>ChannelConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\ChannelTable.cs" />
+    <Compile Include="DataModel\EDF.cs" />
+    <Compile Include="DataModel\MarkerTable.cs" />
+    <Compile Include="DataModel\ResultDomain.cs" />
+    <Compile Include="DataModel\ViewResult.cs" />
+    <Compile Include="FunctionControls\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\HistoryDataView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\HistoryDataView.Designer.cs">
+      <DependentUpon>HistoryDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\DeviceInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\DeviceInfo.Designer.cs">
+      <DependentUpon>DeviceInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\RealDataView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\RealDataView.Designer.cs">
+      <DependentUpon>RealDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\AddMarks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\AddMarks.Designer.cs">
+      <DependentUpon>AddMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\HScrollBarEx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\HScrollBarEx.Designer.cs">
+      <DependentUpon>HScrollBarEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\DataGridViewColourPickerCell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\MulReportChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\MulReportChart.Designer.cs">
+      <DependentUpon>MulReportChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FunctionControls\tools\ProgressTipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunctionControls\tools\ProgressTipForm.Designer.cs">
+      <DependentUpon>ProgressTipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistForm.Designer.cs">
+      <DependentUpon>RegistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Block\ChannelCreatDialog.resx">
+      <DependentUpon>ChannelCreatDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\ImpedanceView.resx">
+      <DependentUpon>ImpedanceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\MontageCopy.resx">
+      <DependentUpon>MontageCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\Montage.resx">
+      <DependentUpon>Montage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\NewDevice.resx">
+      <DependentUpon>NewDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\NewReplayDialog.resx">
+      <DependentUpon>NewReplayDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\ObverseLogCtrl.resx">
+      <DependentUpon>ObverseLogCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\OperationLogForm.resx">
+      <DependentUpon>OperationLogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\ParameterSettings.resx">
+      <DependentUpon>ParameterSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\PatientEdit.resx">
+      <DependentUpon>PatientEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\Moudle.resx">
+      <DependentUpon>Moudle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\DoctorEdit.resx">
+      <DependentUpon>DoctorEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\MarkerManagement.resx">
+      <DependentUpon>MarkerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\ImportHistroyDialog.resx">
+      <DependentUpon>ImportHistroyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\ChannelMulEdit.resx">
+      <DependentUpon>ChannelMulEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\MontageDialog.resx">
+      <DependentUpon>MontageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\ChannelCloneDialog.resx">
+      <DependentUpon>ChannelCloneDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\Calibration.resx">
+      <DependentUpon>Calibration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block\SystemParamDialog.resx">
+      <DependentUpon>SystemParamDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\AddMultSleep.resx">
+      <DependentUpon>AddMultSleep.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\EditEDF.resx">
+      <DependentUpon>EditEDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\ChannelItemConfigCopy.resx">
+      <DependentUpon>ChannelItemConfigCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\ExportSelection.resx">
+      <DependentUpon>ExportSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\AnalysisSelection.resx">
+      <DependentUpon>AnalysisSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\ArousalSelection.resx">
+      <DependentUpon>ArousalSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\AutoSearchDialog.resx">
+      <DependentUpon>AutoSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\MarkerEditCopy.resx">
+      <DependentUpon>MarkerEditCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\OutReportSelection.resx">
+      <DependentUpon>OutReportSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\SleepStageSelection.resx">
+      <DependentUpon>SleepStageSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\SetTime.resx">
+      <DependentUpon>SetTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\Spo2RangeSelection.resx">
+      <DependentUpon>Spo2RangeSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PdfViewDialog.resx">
+      <DependentUpon>PdfViewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\AnalysisRecordView.resx">
+      <DependentUpon>AnalysisRecordView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\ChannelItemConfig.resx">
+      <DependentUpon>ChannelItemConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\LockDialog.resx">
+      <DependentUpon>LockDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\MarkerEdit.resx">
+      <DependentUpon>MarkerEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChannelConfig.resx">
+      <DependentUpon>ChannelConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\HistoryDataView.resx">
+      <DependentUpon>HistoryDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\DeviceInfo.resx">
+      <DependentUpon>DeviceInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\RealDataView.resx">
+      <DependentUpon>RealDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\AddMarks.resx">
+      <DependentUpon>AddMarks.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\HScrollBarEx.resx">
+      <DependentUpon>HScrollBarEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\MulReportChart.resx">
+      <DependentUpon>MulReportChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FunctionControls\tools\ProgressTipForm.resx">
+      <DependentUpon>ProgressTipForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegistForm.resx">
+      <DependentUpon>RegistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\complete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pRun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pStop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\temporary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\temporary3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\temporary4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\pReady.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\pCreat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pCreat2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pReady2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pCreat3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pReady3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volStart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volStop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soundClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soundClose_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vedio_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vedio_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo.ico" />
+    <Content Include="physio.ico" />
+    <None Include="Resources\30min3.png" />
+    <None Include="Resources\60min2.png" />
+    <Content Include="Resources\attention.png" />
+    <None Include="Resources\warningsound2.png" />
+    <None Include="Resources\warningsound1.png" />
+    <None Include="Resources\AutoScore1.png" />
+    <None Include="Resources\AutoScore2.png" />
+    <None Include="Resources\CutEdf.png" />
+    <Content Include="Resources\dropdown.png" />
+    <None Include="Resources\error.ico" />
+    <None Include="Resources\failed.png" />
+    <Content Include="Resources\hidePassword.png" />
+    <None Include="Resources\userIcon.png" />
+    <None Include="Resources\Locksuo.png" />
+    <None Include="Resources\Lockis.png" />
+    <None Include="Resources\Videono.png" />
+    <None Include="Resources\Videoyes.png" />
+    <None Include="Resources\Start1.png" />
+    <None Include="Resources\LeftFastest.png" />
+    <None Include="Resources\RightFast.png" />
+    <None Include="Resources\RightFastest.png" />
+    <None Include="Resources\LeftFast.png" />
+    <None Include="Resources\Stop5.png" />
+    <None Include="Resources\running.png" />
+    <None Include="Resources\SetTimeOK.png" />
+    <None Include="Resources\ParameterSettings.png" />
+    <None Include="Resources\Recover.png" />
+    <None Include="Resources\NoRecover.png" />
+    <None Include="Resources\lowpass.png" />
+    <Content Include="Resources\viewPassword.png" />
+    <None Include="Resources\未镜像.png" />
+    <None Include="Resources\镜像.png" />
+    <None Include="Resources\pCreat4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AwareTec.Polysmith.DataBaseCom\AwareTec.Polysmith.DataBaseCom.csproj">
+      <Project>{1a560f1f-6e11-4a46-a4aa-6cc15508c5f4}</Project>
+      <Name>AwareTec.Polysmith.DataBaseCom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AwareTec.Polysmith.DataCenter\AwareTec.Polysmith.DataCenter.csproj">
+      <Project>{83345acc-abfd-4169-80cb-400ec9543b49}</Project>
+      <Name>AwareTec.Polysmith.DataCenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AwareTec.Polysmith.DataMangement\AwareTec.Polysmith.DataMangement.csproj">
+      <Project>{558f4bd5-b7a5-41dd-9a8f-477692fbd55e}</Project>
+      <Name>AwareTec.Polysmith.DataMangement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AwareTec.Polysmith.pChart\AwareTec.Polysmith.pChart.csproj">
+      <Project>{cfa771b3-e669-4b28-a777-29c68fa6c5c4}</Project>
+      <Name>AwareTec.Polysmith.pChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AwareTec.Polysmith.Protocol\AwareTec.Polysmith.Protocol.csproj">
+      <Project>{05e0fca0-04d0-4247-8208-4dc948e90600}</Project>
+      <Name>AwareTec.Polysmith.Protocol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AwareTec.Polysmith.Util\AwareTec.Polysmith.Util.csproj">
+      <Project>{8e17279a-669d-486f-82a4-08669089a83b}</Project>
+      <Name>AwareTec.Polysmith.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AwareTec.Polysmith.Vedio\AwareTec.Polysmith.Vedio.csproj">
+      <Project>{970955ee-1622-4e1c-98f2-77ef1c322d1c}</Project>
+      <Name>AwareTec.Polysmith.Vedio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Peng\pSystem.UI.Register\pSystem.UI.Register.csproj">
+      <Project>{a3a6906a-5581-43df-b43b-5ce33fafca07}</Project>
+      <Name>pSystem.UI.Register</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pSystem.DataBaseHepler\pSystem.DataBaseHepler.csproj">
+      <Project>{c8eab912-33fc-4868-a1dc-d5cedc717553}</Project>
+      <Name>pSystem.DataBaseHepler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\pSystem.Interface.Util\pSystem.Interface.Util.csproj">
+      <Project>{f0ed2aa0-3513-41dc-808b-c6727176ac03}</Project>
+      <Name>pSystem.Interface.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- TO MODIFY YOUR BUILD PROCESS, ADD YOUR TASK INSIDE ONE OF THE TARGETS BELOW AND UNCOMMENT IT. 
+       OTHER SIMILAR EXTENSION POINTS EXIST, SEE MICROSOFT.COMMON.TARGETS.  -->
+  <!-- 生成之前 -->
+  <Target Name="BeforeBuild">
+    <!-- 复制目录 -->
+    <ItemGroup>
+      <AnalysisSource Include="$(ProjectDir)\PreBuild\AnalysisSource\**\*.*" />
+      <coeffs Include="$(ProjectDir)\PreBuild\coeffs\**\*.*" />
+      <Filiter Include="$(ProjectDir)\PreBuild\Filiter\**\*.*" />
+      <pvedio Include="$(ProjectDir)\PreBuild\pvedio\**\*.*" />
+      <Scheme Include="$(ProjectDir)\PreBuild\Scheme\**\*.*" />
+      <TemPlate Include="$(ProjectDir)\PreBuild\TemPlate\**\*.*" />
+      <dll Include="$(ProjectDir)\PreBuild\dll\**\*.*" />
+      <StatisticsReport Include="$(ProjectDir)\PreBuild\StatisticsReport\**\*.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(AnalysisSource)" DestinationFolder="$(OutDir)\AnalysisSource\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(coeffs)" DestinationFolder="$(OutDir)\coeffs\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(Filiter)" DestinationFolder="$(OutDir)\Filiter\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(pvedio)" DestinationFolder="$(OutDir)\pvedio\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(Scheme)" DestinationFolder="$(OutDir)\Scheme\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(TemPlate)" DestinationFolder="$(OutDir)\TemPlate\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(dll)" DestinationFolder="$(OutDir)\dll\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(StatisticsReport)" DestinationFolder="$(OutDir)\StatisticsReport\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <!-- 复制文件 -->
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\help.pdf" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\DefaultReportTemplate.doc" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\channels.cfg" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\demo.dll" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\gdi32.dll" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\msvcp120.dll" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\msvcr120.dll" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\onuse.dll" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\psg_wrapper.dll" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\itextsharp.dll" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\registdll.bat" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\respiratory_rate.dll" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\阻抗通道明细.txt" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)\PreBuild\LowSpo2.wav" DestinationFolder="$(OutDir)\" SkipUnchangedFiles="true" />
+  </Target>
+  <!-- 清理之前 -->
+  <!--   <Target Name="BeforeClean">
+    <RemoveDir Directories="$(OUTDIR)"/>
+  </Target>
+ -->
+</Project>
